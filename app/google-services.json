@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "281697731207",
+    "project_id": "movienest123-92725",
+    "storage_bucket": "movienest123-92725.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281697731207:android:9d2e9c0d2fb7a96ade6e22",
+        "android_client_info": {
+          "package_name": "com.example.movienest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMpyOrh_LtGT7Jpo3vyXUCQdur3c3MEys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
