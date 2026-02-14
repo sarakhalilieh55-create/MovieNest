@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- قسم الإعدادات العامة -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="settings page"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingBottom="8dp"/>
+
+            <Switch
+                android:id="@+id/switchDarkMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="night mode "/>
+
+            <EditText
+                android:id="@+id/editUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="user name"
+                android:inputType="textPersonName"/>
+
+            <!-- فصل بين الأقسام -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCC"
+                android:layout_marginVertical="16dp"/>
+
+            <!-- قسم الحساب -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="account"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="log out"/>
+
+            <Button
+                android:id="@+id/btnAddAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="add an account"
+                android:layout_marginTop="8dp"/>
+
+            <!-- فصل بين الأقسام -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCC"
+                android:layout_marginVertical="16dp"/>
+
+
+
+            <Button
+                android:id="@+id/btnContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="contact with us"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

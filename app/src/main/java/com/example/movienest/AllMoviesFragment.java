@@ -47,7 +47,7 @@ public class AllMoviesFragment extends Fragment {
     private FloatingActionButton btnAdd;
 >>>>>>> 60da0d6 (newer one)
     private SearchView srchView;
-    private Button favIcon;
+
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -124,7 +124,7 @@ public class AllMoviesFragment extends Fragment {
             @Override
             public void onItemClick(int position) {
                 // Handle item click here
-                String selectedItem = list.get(position).getNameCar();
+                String selectedItem = list.get(position).getNamemovie();
                 Toast.makeText(getActivity(), "Clicked: " + selectedItem, Toast.LENGTH_SHORT).show();
                 Bundle args = new Bundle();
                 args.putParcelable("movie", list.get(position)); // or use Parcelable for better performance

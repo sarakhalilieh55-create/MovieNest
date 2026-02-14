@@ -16,8 +16,7 @@ public class Movie implements Parcelable {
     private  String   actors;
     private String photo;
 
-    public Movie() {
-    }
+
 
     public Movie(String namemovie, String nameseries, String time,  String year,
                    String summarize, String type,  String producers, String actors,
@@ -71,75 +70,75 @@ public class Movie implements Parcelable {
 
     }
 
-    public String getId() {
-        return namemovie;
-    }
 
-    public void setId(String id) {
+
+   public String getNamemovie(){return namemovie;}
+
+    public void setNamemovie(String namemovie) {
         this.namemovie = namemovie;
     }
 
-    public String getNameCar() {
+    public String getNameseries() {
         return nameseries;
     }
 
-    public void setNameCar(String nameCar) {
+    public void setNameseries(String nameseries) {
         this.nameseries = nameseries;
     }
 
-    public String getHorse_power() {
+    public String getTime() {
         return time;
     }
 
-    public void setHorse_power(String horse_power) {
+    public void setTime(String time) {
         this.time = time;
     }
 
-    public String getOwners() {
+    public String getYear() {
         return year;
     }
 
-    public void setOwners(String owners) {
+    public void setYear(String year) {
         this.year = year;
     }
 
-    public String getPhone() {
+    public String getSummarize() {
         return summarize;
     }
 
-    public void setPhone(String phone) {
+    public void setSummarize(String summarize) {
         this.summarize = summarize;
     }
 
-    public String getColor() {
+    public String getType() {
         return type;
     }
 
-    public void setColor(String color) {
+    public void setType(String type) {
         this.type = type;
     }
 
-    public String getCar_num() {
+    public String getProducers() {
         return producers;
     }
 
-    public void setCar_num(String car_num) {
+    public void setProducers(String producers) {
         this.producers = producers;
     }
 
-    public String getManufacturer() {
+    public String getActors() {
         return actors;
     }
 
-    public void setManufacturer(String manufacturer) {
+    public void setActors(String actors) {
         this.actors = actors;
     }
 
-    public String getYear() {
+    public String getPhoto() {
         return photo;
     }
 
-    public void setYear(String year) {
+    public void setPhoto(String photo) {
         this.photo = photo;
     }
 
@@ -165,21 +164,12 @@ public class Movie implements Parcelable {
         return 0;
     }
 
-    public String getNamemovie() {
-        return namemovie;
-    }
-
-    public String getNameseries() {
-        return nameseries;
+    public String getnamemovie() {
+        return "" ;
     }
 
     public String getnameseries() {
-        return null;
-    }
-
-    public String getnamemovie() {
-        String o = null;
-        return o;
+        return "" ;
     }
 
     public String gettime() {

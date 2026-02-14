@@ -16,146 +16,77 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-<<<<<<< HEAD
-
-        <EditText
-            android:id="@+id/etnamemovieAddMovieFragment"
-=======
         <!-- Car Number -->
         <EditText
             android:id="@+id/etCarNumberAddFragment"
->>>>>>> 60da0d6 (newer one)
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="namemovie"
             android:inputType="number" />
 
-<<<<<<< HEAD
-
-        <EditText
-            android:id="@+id/etnameseriesAddMovieFragment"
-=======
         <!-- Car Name -->
         <EditText
             android:id="@+id/etNameCarAddFragment"
->>>>>>> 60da0d6 (newer one)
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="nameseries" />
 
-<<<<<<< HEAD
-
-        <EditText
-            android:id="@+id/ettimeAddMovieFragment"
-=======
         <!-- Car Model -->
         <EditText
             android:id="@+id/etCarModelAddFragment"
->>>>>>> 60da0d6 (newer one)
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="time" />
 
-<<<<<<< HEAD
-
-        <Spinner
-            android:id="@+id/etyearAddMovieFragment"
-=======
         <!-- Year of Car -->
         <Spinner
             android:id="@+id/yearOfCarSpinner"
->>>>>>> 60da0d6 (newer one)
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="year" />
 
-<<<<<<< HEAD
-
-        <EditText
-            android:id="@+id/etsummarizeAddMovieFragment"
-=======
         <!-- Manufacturer -->
         <EditText
             android:id="@+id/etManufacturerAddFragment"
->>>>>>> 60da0d6 (newer one)
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="summarize" />
 
-<<<<<<< HEAD
-
-        <EditText
-            android:id="@+id/ettypeAddMovieFragment"
-=======
         <!-- Phone -->
         <EditText
             android:id="@+id/etPhoneAddFragment"
->>>>>>> 60da0d6 (newer one)
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="type"
              />
 
-<<<<<<< HEAD
-
-        <EditText
-            android:id="@+id/etproducersAddMovieFragment"
-=======
         <!-- Car Type -->
 
         <!-- Year of Test -->
         <EditText
             android:id="@+id/etTestAddFragment"
->>>>>>> 60da0d6 (newer one)
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="producers"
             />
 
-<<<<<<< HEAD
-
-        <EditText
-            android:id="@+id/etactorsAddMovieFragment"
-=======
         <!-- Kilometres -->
         <EditText
             android:id="@+id/etKilometreAddFragment"
->>>>>>> 60da0d6 (newer one)
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="actors"
              />
 
-<<<<<<< HEAD
-
-        <EditText
-            android:id="@+id/etphotoAddMovieFragment"
-=======
         <!-- Engine Capacity -->
         <EditText
             android:id="@+id/etEngineCapacityAddFragment"
->>>>>>> 60da0d6 (newer one)
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="photo"
             />
 
-<<<<<<< HEAD
-        <EditText
-            android:id="@+id/btnAddmovieAddMovieFragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="photo"
-            />
-        <EditText
-            android:id="@+id/ivmovieAddMovieFragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="photo"
-            />
-=======
 
->>>>>>> 60da0d6 (newer one)
 
         <!-- Buttons for actions -->
         <LinearLayout
