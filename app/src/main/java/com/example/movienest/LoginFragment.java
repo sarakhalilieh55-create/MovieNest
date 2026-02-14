@@ -18,7 +18,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 60da0d6 (newer one)
 public class LoginFragment extends Fragment {
 
     private EditText etUsername,etPassword;
@@ -28,12 +31,18 @@ public class LoginFragment extends Fragment {
     private Button asGuest;
     private FirebaseServices fbs;
 
+<<<<<<< HEAD
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+=======
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+>>>>>>> 60da0d6 (newer one)
     }
 
     @Override
@@ -74,7 +83,11 @@ public class LoginFragment extends Fragment {
         tvForgotPasswardLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
                 gotoFrgotPasswordFragment();
+=======
+                gotoForgotPasswordFragment();
+>>>>>>> 60da0d6 (newer one)
             }
         });
 
@@ -120,6 +133,7 @@ public class LoginFragment extends Fragment {
 
     private void gotoSignupFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+<<<<<<< HEAD
         ft.replace(R.id.main,new SignupFragment());
         ft.commit();
 
@@ -127,6 +141,15 @@ public class LoginFragment extends Fragment {
     private void gotoFrgotPasswordFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.main,new ForgotpasswordFragment());
+=======
+        ft.replace(R.id.frameLayout,new SignupFragment());
+        ft.commit();
+
+    }
+    private void gotoForgotPasswordFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frameLayout,new ForgotpasswordFragment());
+>>>>>>> 60da0d6 (newer one)
         ft.commit();
 
     }

@@ -24,7 +24,10 @@ public class ForgotpasswordFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 60da0d6 (newer one)
     }
 
     @Override
@@ -60,6 +63,11 @@ public class ForgotpasswordFragment extends Fragment {
 
             }
         });
+<<<<<<< HEAD
 
     }
+=======
+    }
+
+>>>>>>> 60da0d6 (newer one)
 }

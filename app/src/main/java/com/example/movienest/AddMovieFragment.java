@@ -1,6 +1,9 @@
 package com.example.movienest;
 
+<<<<<<< HEAD
 import android.annotation.SuppressLint;
+=======
+>>>>>>> 60da0d6 (newer one)
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -24,9 +27,12 @@ import android.widget.ImageView;
 
 import android.widget.Toast;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 60da0d6 (newer one)
 public class AddMovieFragment extends Fragment {
     private static final int GALLERY_REQUEST_CODE = 123;
     ImageView img;
@@ -46,8 +52,11 @@ public class AddMovieFragment extends Fragment {
             "2003","2002","2001","2000"," Other..."};
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 60da0d6 (newer one)
     private AdapterView<Adapter> AdapterView;
     private String namemovie;
     private String nameseries;
@@ -62,8 +71,11 @@ public class AddMovieFragment extends Fragment {
     private Movie movie;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 60da0d6 (newer one)
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,7 +94,10 @@ public class AddMovieFragment extends Fragment {
         init();
     }
 
+<<<<<<< HEAD
     @SuppressLint("WrongViewCast")
+=======
+>>>>>>> 60da0d6 (newer one)
     private void init() {
         // ---->    פרטי הוספת רכב    <----
         //editText
@@ -113,16 +128,22 @@ public class AddMovieFragment extends Fragment {
                 }
             });
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 60da0d6 (newer one)
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openGallery();
             }
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 60da0d6 (newer one)
     }
 
 
@@ -177,7 +198,11 @@ public class AddMovieFragment extends Fragment {
     public void gotoCarList() {
 
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+<<<<<<< HEAD
         ft.replace(R.id.main,new CarListMapFragment());
+=======
+        ft.replace(R.id.frameLayout,new CarListMapFragment());
+>>>>>>> 60da0d6 (newer one)
         ft.commit();
     }
 

@@ -1,6 +1,10 @@
 package com.example.movienest;
 
+<<<<<<< HEAD
 import static com.example.movienest.R.id.main;
+=======
+import static com.example.movienest.R.id.frameLayout;
+>>>>>>> 60da0d6 (newer one)
 
 import android.os.Bundle;
 
@@ -37,7 +41,11 @@ public class AllMoviesFragment extends Fragment {
     private FirebaseServices fbs;
     private myAdapter1 myAdapter;
     private ArrayList<Movie> list, filteredList;
+<<<<<<< HEAD
     private FloatingActionButton btnAdd = getView().findViewById(R.id.floatingButtonAddCarList);
+=======
+    private FloatingActionButton btnAdd;
+>>>>>>> 60da0d6 (newer one)
     private SearchView srchView;
     private Button favIcon;
 
@@ -94,7 +102,12 @@ public class AllMoviesFragment extends Fragment {
     }
 
     private void init() {
+<<<<<<< HEAD
         recyclerView = getView().findViewById(R.id.rvCarlist);
+=======
+        recyclerView = getView().findViewById(R.id.rvMovielist);
+        btnAdd = getView().findViewById(R.id.floatingButtonAddMovieList);
+>>>>>>> 60da0d6 (newer one)
         fbs = FirebaseServices.getInstance();
         //carsMap = new HashMap<>();
         recyclerView.setHasFixedSize(true);
@@ -209,7 +222,11 @@ public class AllMoviesFragment extends Fragment {
 
     public void gotoAllMovieFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+<<<<<<< HEAD
         ft.replace(main,new AddMovieFragment());
+=======
+        ft.replace(frameLayout,new AddMovieFragment());
+>>>>>>> 60da0d6 (newer one)
         ft.commit();
     }
 

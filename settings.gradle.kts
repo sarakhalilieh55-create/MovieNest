@@ -11,6 +11,12 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+<<<<<<< HEAD
+=======
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+}
+>>>>>>> 60da0d6 (newer one)
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {

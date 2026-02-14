@@ -29,17 +29,26 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.auth.User;
 
+<<<<<<< HEAD
 
 public class SignupFragment extends Fragment {
     private static final int GALLERY_REQUEST_CODE = 123;
     private EditText etUsername, etPassword, etConfirmPassword,
+=======
+public class SignupFragment extends Fragment {
+    private static final int GALLERY_REQUEST_CODE = 123;
+    private EditText etUsername,etPassword, etConfirmPassword,
+>>>>>>> 60da0d6 (newer one)
             etFirstname, etLastname, etPhone, etAddress;
     ImageView ivUserPhoto;
     private Button btnSignup;
     private FirebaseServices fbs;
     private Object msg = distance();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 60da0d6 (newer one)
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,20 +61,33 @@ public class SignupFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_signup, container, false);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 60da0d6 (newer one)
     @Override
     public void onStart() {
         super.onStart();
         // connecting components
+<<<<<<< HEAD
         fbs = FirebaseServices.getInstance();
         etUsername = getView().findViewById(R.id.etUsernameSignup);
         etPassword = getView().findViewById(R.id.etPasswordSignup);
+=======
+        fbs=FirebaseServices.getInstance();
+        etUsername=getView().findViewById(R.id.etUsernameSignup);
+        etPassword=getView().findViewById(R.id.etPasswordSignup);
+>>>>>>> 60da0d6 (newer one)
         etFirstname = getView().findViewById(R.id.etFirstnameSignupFragment);
         etLastname = getView().findViewById(R.id.etLastnameSignupFragment);
         etConfirmPassword = getView().findViewById(R.id.etConfirmPasswordSignupFragment);
         etPhone = getView().findViewById(R.id.etPhoneSignupFragment);
         etAddress = getView().findViewById(R.id.etAddressSignupFragment);
+<<<<<<< HEAD
         btnSignup = getView().findViewById(R.id.btnSignupSignup);
+=======
+        btnSignup=getView().findViewById(R.id.btnSignupSignup);
+>>>>>>> 60da0d6 (newer one)
         ivUserPhoto = getView().findViewById(R.id.ivPhotoSignupFragment);
         ivUserPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,8 +99,13 @@ public class SignupFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 //Data validation
+<<<<<<< HEAD
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
+=======
+                String username=etUsername.getText().toString();
+                String password=etPassword.getText().toString();
+>>>>>>> 60da0d6 (newer one)
                 String confirmPassword = etConfirmPassword.getText().toString();
                 String firstname = etFirstname.getText().toString();
                 String lastname = etLastname.getText().toString();
@@ -86,7 +113,12 @@ public class SignupFragment extends Fragment {
                 String address = etAddress.getText().toString();
                 if (username.trim().isEmpty() || password.trim().isEmpty() || firstname.trim().isEmpty() ||
                         lastname.trim().isEmpty() || confirmPassword.trim().isEmpty() || phone.trim().isEmpty() ||
+<<<<<<< HEAD
                         address.trim().isEmpty()) {
+=======
+                        address.trim().isEmpty())
+                {
+>>>>>>> 60da0d6 (newer one)
                     Toast.makeText(getActivity(), "some fields are empty", Toast.LENGTH_SHORT).show();
                     return;
 
@@ -117,13 +149,22 @@ public class SignupFragment extends Fragment {
                 }
                 @SuppressLint("RestrictedApi") User user = new User(firstname);
 
+<<<<<<< HEAD
                 fbs.getAuth().createUserWithEmailAndPassword(username, password)
+=======
+                fbs.getAuth().createUserWithEmailAndPassword(username,password)
+>>>>>>> 60da0d6 (newer one)
                         .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
 
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
 
+<<<<<<< HEAD
                                 if (task.isSuccessful()) {
+=======
+                                if (task.isSuccessful())
+                                {
+>>>>>>> 60da0d6 (newer one)
                                     fbs.getFire().collection("users").add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                         @Override
                                         public void onSuccess(DocumentReference documentReference) {
@@ -137,7 +178,13 @@ public class SignupFragment extends Fragment {
                                     });
                                     // String firstName, String lastName, String username, String phone, String address, String photo) {
                                     Toast.makeText(getActivity(), "you have succesfully signed up", Toast.LENGTH_SHORT).show();
+<<<<<<< HEAD
                                 } else {
+=======
+                                }
+                                else
+                                {
+>>>>>>> 60da0d6 (newer one)
                                     Toast.makeText(getActivity(), "failed to sign up! check user or password", Toast.LENGTH_SHORT).show();
 
                                 }
@@ -148,7 +195,10 @@ public class SignupFragment extends Fragment {
 
             }
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 60da0d6 (newer one)
     }
 
     private void openGallery() {
@@ -176,6 +226,7 @@ public class SignupFragment extends Fragment {
         return null;
     }
 
+<<<<<<< HEAD
     public void gotoCarList() {
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.main, new SignupFragment());
@@ -183,3 +234,13 @@ public class SignupFragment extends Fragment {
 
     }
 }
+=======
+    public void gotoCarList()
+    {
+        FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frameLayout,new SignupFragment());
+        ft.commit();
+    }
+
+}
+>>>>>>> 60da0d6 (newer one)
