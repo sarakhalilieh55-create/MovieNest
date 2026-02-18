@@ -162,7 +162,6 @@ public class AllMoviesFragment extends Fragment {
         });
         btnAdd.setVisibility(View.INVISIBLE); // currently hidden
 
-        ((MainActivity)getActivity()).pushFragment(new AllMoviesFragment());
     }
 
     private void applyFilter(String query) {

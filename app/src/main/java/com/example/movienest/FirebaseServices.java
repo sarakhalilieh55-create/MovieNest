@@ -1,31 +1,31 @@
 package com.example.movienest;
-
-import android.annotation.SuppressLint;
 import android.net.Uri;
-
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.auth.User;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
 
-import java.util.concurrent.atomic.AtomicMarkableReference;
 
 public class FirebaseServices {
-    private Object currentUser;
+    private static FirebaseServices instance;
     private FirebaseAuth auth;
+    private FirebaseFirestore fire;
+    private FirebaseStorage storage;
+    private Uri selectedImageURL;
 
-    @SuppressLint("RestrictedApi")
-    public static FirebaseServices getInstance() {
-
-        FirebaseServices o = null;
-        return o;
+    public Uri getSelectedImageURL() {
+        return selectedImageURL;
     }
 
-    public static FirebaseServices reloadInstance() {
-        return null;
+    public void setSelectedImageURL(Uri selectedImageURL) {
+        this.selectedImageURL = selectedImageURL;
     }
 
-    public void setCurrentUser(@SuppressLint("RestrictedApi") User currentUser) {
-        this.currentUser = currentUser;
+    public FirebaseServices() {
+        auth = FirebaseAuth.getInstance();
+        fire = FirebaseFirestore.getInstance();
+        storage = FirebaseStorage.getInstance();
+
+
     }
 
 
@@ -33,27 +33,20 @@ public class FirebaseServices {
         return auth;
     }
 
-    public void setAuth(FirebaseAuth auth) {
-        this.auth = auth;
+    public FirebaseFirestore getFire() {
+        return fire;
     }
 
-    public DocumentReference getFire() {
-        return null;
+    public FirebaseStorage getStorage() {
+        return storage;
     }
 
-    public Uri getSelectedImageURL() {
+    public static FirebaseServices getInstance() {
+        if (instance == null) {
+            instance = new FirebaseServices();
 
-        return null;
+        }
+        return instance;
     }
-
-    public void setSelectedImageURL(Uri uri) {
-    }
-
-    public AtomicMarkableReference<Object> getStorage() {
-        AtomicMarkableReference<Object> o = null;
-        return o;
-    }
-
 
 }
-    

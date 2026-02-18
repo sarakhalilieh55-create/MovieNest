@@ -29,58 +29,21 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.auth.User;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link SignupFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class SignupFragment extends Fragment {
     private static final int GALLERY_REQUEST_CODE = 123;
-    private EditText etUsername,etPassword, etConfirmPassword,
+    private EditText etUsername, etPassword, etConfirmPassword,
             etFirstname, etLastname, etPhone, etAddress;
     ImageView ivUserPhoto;
     private Button btnSignup;
     private FirebaseServices fbs;
     private Object msg = distance();
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public SignupFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment SignupFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static SignupFragment newInstance(String param1, String param2) {
-        SignupFragment fragment = new SignupFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
@@ -89,19 +52,20 @@ public class SignupFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_signup, container, false);
     }
+
     @Override
     public void onStart() {
         super.onStart();
         // connecting components
-        fbs=FirebaseServices.getInstance();
-        etUsername=getView().findViewById(R.id.etUsernameSignup);
-        etPassword=getView().findViewById(R.id.etPasswordSignup);
+        fbs = FirebaseServices.getInstance();
+        etUsername = getView().findViewById(R.id.etUsernameSignup);
+        etPassword = getView().findViewById(R.id.etPasswordSignup);
         etFirstname = getView().findViewById(R.id.etFirstnameSignupFragment);
         etLastname = getView().findViewById(R.id.etLastnameSignupFragment);
         etConfirmPassword = getView().findViewById(R.id.etConfirmPasswordSignupFragment);
         etPhone = getView().findViewById(R.id.etPhoneSignupFragment);
         etAddress = getView().findViewById(R.id.etAddressSignupFragment);
-        btnSignup=getView().findViewById(R.id.btnSignupSignup);
+        btnSignup = getView().findViewById(R.id.btnSignupSignup);
         ivUserPhoto = getView().findViewById(R.id.ivPhotoSignupFragment);
         ivUserPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,8 +77,8 @@ public class SignupFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 //Data validation
-                String username=etUsername.getText().toString();
-                String password=etPassword.getText().toString();
+                String username = etUsername.getText().toString();
+                String password = etPassword.getText().toString();
                 String confirmPassword = etConfirmPassword.getText().toString();
                 String firstname = etFirstname.getText().toString();
                 String lastname = etLastname.getText().toString();
@@ -122,8 +86,7 @@ public class SignupFragment extends Fragment {
                 String address = etAddress.getText().toString();
                 if (username.trim().isEmpty() || password.trim().isEmpty() || firstname.trim().isEmpty() ||
                         lastname.trim().isEmpty() || confirmPassword.trim().isEmpty() || phone.trim().isEmpty() ||
-                        address.trim().isEmpty())
-                {
+                        address.trim().isEmpty()) {
                     Toast.makeText(getActivity(), "some fields are empty", Toast.LENGTH_SHORT).show();
                     return;
 
@@ -154,14 +117,13 @@ public class SignupFragment extends Fragment {
                 }
                 @SuppressLint("RestrictedApi") User user = new User(firstname);
 
-                fbs.getAuth().createUserWithEmailAndPassword(username,password)
+                fbs.getAuth().createUserWithEmailAndPassword(username, password)
                         .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
 
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
 
-                                if (task.isSuccessful())
-                                {
+                                if (task.isSuccessful()) {
                                     fbs.getFire().collection("users").add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                         @Override
                                         public void onSuccess(DocumentReference documentReference) {
@@ -175,9 +137,7 @@ public class SignupFragment extends Fragment {
                                     });
                                     // String firstName, String lastName, String username, String phone, String address, String photo) {
                                     Toast.makeText(getActivity(), "you have succesfully signed up", Toast.LENGTH_SHORT).show();
-                                }
-                                else
-                                {
+                                } else {
                                     Toast.makeText(getActivity(), "failed to sign up! check user or password", Toast.LENGTH_SHORT).show();
 
                                 }
@@ -188,7 +148,7 @@ public class SignupFragment extends Fragment {
 
             }
         });
-        ((MainActivity)getActivity()).pushFragment(new SignupFragment());
+
     }
 
     private void openGallery() {
@@ -216,18 +176,10 @@ public class SignupFragment extends Fragment {
         return null;
     }
 
-    public void gotoCarList()
-    {
-        FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.frameLayout,new CarListMapFragment());
+    public void gotoCarList() {
+        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frameLayout, new SignupFragment());
         ft.commit();
-        setNavigationBarVisible();
-    }
 
-    private void setNavigationBarVisible() {
-        ((MainActivity)getActivity()).getBottomNavigationView().setVisibility(View.VISIBLE);
-    }
-
-    private class CarListMapFragment extends Fragment {
     }
 }
