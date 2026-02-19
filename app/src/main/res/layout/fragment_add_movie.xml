@@ -16,77 +16,86 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Car Number -->
+
         <EditText
-            android:id="@+id/etCarNumberAddFragment"
+            android:id="@+id/etnamemovieAddMovieFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="namemovie"
             android:inputType="number" />
 
-        <!-- Car Name -->
+
         <EditText
-            android:id="@+id/etNameCarAddFragment"
+            android:id="@+id/etnameseriesAddMovieFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="nameseries" />
 
-        <!-- Car Model -->
+
         <EditText
-            android:id="@+id/etCarModelAddFragment"
+            android:id="@+id/ettimeAddMovieFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="time" />
 
-        <!-- Year of Car -->
+
         <Spinner
-            android:id="@+id/yearOfCarSpinner"
+            android:id="@+id/etyearAddMovieFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="year" />
 
-        <!-- Manufacturer -->
+
         <EditText
-            android:id="@+id/etManufacturerAddFragment"
+            android:id="@+id/etsummarizeAddMovieFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="summarize" />
 
-        <!-- Phone -->
+
         <EditText
-            android:id="@+id/etPhoneAddFragment"
+            android:id="@+id/ettypeAddMovieFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="type"
              />
 
-        <!-- Car Type -->
 
-        <!-- Year of Test -->
         <EditText
-            android:id="@+id/etTestAddFragment"
+            android:id="@+id/etproducersAddMovieFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="producers"
             />
 
-        <!-- Kilometres -->
+
         <EditText
-            android:id="@+id/etKilometreAddFragment"
+            android:id="@+id/etactorsAddMovieFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="actors"
              />
 
-        <!-- Engine Capacity -->
+
         <EditText
-            android:id="@+id/etEngineCapacityAddFragment"
+            android:id="@+id/etphotoAddMovieFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="photo"
             />
 
-
+        <EditText
+            android:id="@+id/btnAddmovieAddMovieFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="photo"
+            />
+        <EditText
+            android:id="@+id/ivmovieAddMovieFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="photo"
+            />
 
         <!-- Buttons for actions -->
         <LinearLayout

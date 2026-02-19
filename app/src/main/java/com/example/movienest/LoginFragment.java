@@ -120,13 +120,13 @@ public class LoginFragment extends Fragment {
 
     private void gotoSignupFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.frameLayout,new SignupFragment());
+        ft.replace(R.id.main,new SignupFragment());
         ft.commit();
 
     }
     private void gotoFrgotPasswordFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.frameLayout,new ForgotpasswordFragment());
+        ft.replace(R.id.main,new ForgotpasswordFragment());
         ft.commit();
 
     }
