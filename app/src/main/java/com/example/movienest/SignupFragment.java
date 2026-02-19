@@ -178,7 +178,7 @@ public class SignupFragment extends Fragment {
 
     public void gotoCarList() {
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.frameLayout, new SignupFragment());
+        ft.replace(R.id.main, new SignupFragment());
         ft.commit();
 
     }

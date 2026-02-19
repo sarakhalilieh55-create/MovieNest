@@ -1,5 +1,6 @@
 package com.example.movienest;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -81,6 +82,7 @@ public class AddMovieFragment extends Fragment {
         init();
     }
 
+    @SuppressLint("WrongViewCast")
     private void init() {
         // ---->    פרטי הוספת רכב    <----
         //editText
@@ -175,7 +177,7 @@ public class AddMovieFragment extends Fragment {
     public void gotoCarList() {
 
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.frameLayout,new CarListMapFragment());
+        ft.replace(R.id.main,new CarListMapFragment());
         ft.commit();
     }
 
