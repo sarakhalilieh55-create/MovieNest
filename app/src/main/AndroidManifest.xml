@@ -12,8 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieNest">
         <activity
+            android:name=".rateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RatingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MovieNest" />
+        <activity
             android:name=".UsActivity"
             android:exported="false" />
+        <activity android:name=".RatingActivity"
+            tools:ignore="DuplicateActivity" />
         <activity
             android:name=".SettingsActivity"
             android:exported="false" />

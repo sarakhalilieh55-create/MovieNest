@@ -18,6 +18,8 @@ firebaseAi = "17.5.0"
 firebaseStorage = "22.0.1"
 firebaseAnalytics = "23.0.0"
 firebaseInappmessaging = "22.0.2"
+navigationFragment = "2.6.0"
+navigationUi = "2.6.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -33,6 +35,8 @@ firebase-ai = { group = "com.google.firebase", name = "firebase-ai", version.ref
 firebase-storage = { group = "com.google.firebase", name = "firebase-storage", version.ref = "firebaseStorage" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
 firebase-inappmessaging = { group = "com.google.firebase", name = "firebase-inappmessaging", version.ref = "firebaseInappmessaging" }
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
